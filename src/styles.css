@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+/* || RESET */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+/* || GENERAL */
+
+html {
+  font-family: var(--FF);
+}
+
+body {
+  min-height: 100svh;
+}
+
+/* || VARIABLES */
+:root {
+  /* | FONTS */
+  --FF: "Inter", sans-serif;
+  --FS-HEADER-1: 32px;
+  --FS-HEADER-2: 24px;
+  --FS-BODY-1: 18px;
+  --FS-BODY-2: 16px;
+  --FS-BODY-3: 14px;
+  --FS-BODY-4: 12px;
+  --F-SPACING: -2%;
+
+  /* | COLOR */
+  --PRIMARY-COLOR: hsl(223, 99%, 59%);
+  --ACCENT-COLOR: hsl(46, 94%, 54%);
+
+  --F-COLOR-1: hsl(208, 15%, 17%);
+  --F-COLOR-2: hsl(208, 11%, 24%);
+  --F-COLOR-3: hsl(0, 0%, 47%);
+  --F-COLOR-4: hsl(210, 3%, 61%);
+  --F-COLOR-5: hsl(197, 11%, 88%);
+}
