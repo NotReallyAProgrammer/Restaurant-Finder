@@ -45,10 +45,14 @@ body {
   /* | COLOR */
   --PRIMARY-COLOR: hsl(223, 99%, 59%);
   --ACCENT-COLOR: hsl(46, 94%, 54%);
+  --BACKGROUND-COLOR: #fff;
 
   --F-COLOR-1: hsl(208, 15%, 17%);
   --F-COLOR-2: hsl(208, 11%, 24%);
   --F-COLOR-3: hsl(0, 0%, 47%);
   --F-COLOR-4: hsl(210, 3%, 61%);
   --F-COLOR-5: hsl(197, 11%, 88%);
+
+  /* | SPACING */
+  --PADDING-INLINE: 5%;
 }
