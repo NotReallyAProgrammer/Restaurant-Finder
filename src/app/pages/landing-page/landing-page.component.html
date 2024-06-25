@@ -40,8 +40,29 @@
     </section>
   </section>
 
+  @if (isFilterClose) {
   <aside class="landing__filter">
     <nav class="filter-nav">
+      <button
+        type="button"
+        title="close button"
+        class="close-button"
+        (click)="closeNav()"
+      >
+        <i>
+          <svg
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polygon
+              fill-rule="evenodd"
+              points="8 9.414 3.707 13.707 2.293 12.293 6.586 8 2.293 3.707 3.707 2.293 8 6.586 12.293 2.293 13.707 3.707 9.414 8 13.707 12.293 12.293 13.707 8 9.414"
+            />
+          </svg>
+        </i>
+      </button>
       <div class="filter-header">
         <h2>Filter</h2>
 
@@ -739,6 +760,12 @@
           </li>
         </ul>
       </div>
+
+      <div class="filter-button">
+        <button type="submit">Apply Filter</button>
+        <button type="submit">Reset Filter</button>
+      </div>
     </nav>
   </aside>
+  }
 </section>
