@@ -146,6 +146,7 @@
   font-size: 14px;
   margin-top: 30px;
   margin-bottom: 15px;
+  color: var(--F-COLOR-1);
 }
 
 .menu {
@@ -171,6 +172,7 @@
 
 .menu li p {
   font-size: 14px;
+  color: var(--F-COLOR-3);
 }
 
 .filter-button {
@@ -229,3 +231,28 @@
 }
 
 /* END OF .filter */
+
+/*  */
+/*  */
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 760px) {
+  .landing__filter {
+    position: initial;
+
+    max-width: 280px;
+    background: none;
+    box-shadow: none;
+    margin-left: var(--PADDING-INLINE);
+  }
+
+  .filter-nav {
+    margin-top: 0;
+  }
+
+  .filter-header p,
+  .close-button,
+  .filter-button {
+    display: none;
+  }
+}
