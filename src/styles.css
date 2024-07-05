@@ -30,6 +30,11 @@ body {
   min-height: 100svh;
 }
 
+i {
+  display: grid;
+  place-items: center;
+}
+
 /* || VARIABLES */
 :root {
   /* | FONTS */

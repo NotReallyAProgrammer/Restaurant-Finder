@@ -8,7 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './landing-page.component.css',
 })
 export class LandingPageComponent {
-  isFilterClose: boolean = true;
+  isFilterClose: boolean = false;
+
+  showFilter(): void {
+    this.isFilterClose = !this.isFilterClose;
+  }
+
   closeNav(): void {
     this.isFilterClose = !this.isFilterClose;
   }
