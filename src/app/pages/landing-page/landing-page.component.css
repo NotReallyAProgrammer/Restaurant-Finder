@@ -238,7 +238,8 @@
 /* END OF .filter */
 
 .landing__card {
-  padding: var(--PADDING-INLINE);
+  padding-inline: var(--PADDING-INLINE);
+  padding-top: 50px;
   width: 100%;
 }
 
