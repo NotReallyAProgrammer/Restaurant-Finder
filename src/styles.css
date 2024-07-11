@@ -53,12 +53,15 @@ i {
   --ACCENT-COLOR: hsl(46, 94%, 54%);
   --BACKGROUND-COLOR: #fff;
 
+  --BORDER-COLOR: #e5e9eb;
+
   --F-COLOR-1: #252c32;
   --F-COLOR-2: #363e44;
-  --F-COLOR-3: #787878;
-  --F-COLOR-4: #999c9f;
-  --F-COLOR-5: #dde2e4;
-  --F-COLOR-6: #ffffff;
+  --F-COLOR-3: #696e73;
+  --F-COLOR-4: #787878;
+  --F-COLOR-5: #999c9f;
+  --F-COLOR-6: #dde2e4;
+  --F-COLOR-7: #ffffff;
 
   /* | SPACING */
   --PADDING-INLINE: 5%;

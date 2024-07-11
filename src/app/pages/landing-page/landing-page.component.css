@@ -78,7 +78,7 @@
 .input {
   width: 100%;
   height: 100%;
-  color: var(--F-COLOR-3);
+  color: var(--F-COLOR-4);
   font-size: var(--FS-BODY-3);
   padding-inline: 45px;
   border-radius: 10px;
@@ -177,7 +177,7 @@
 
 .menu li p {
   font-size: 14px;
-  color: var(--F-COLOR-3);
+  color: var(--F-COLOR-4);
 }
 
 .filter-button {
@@ -269,7 +269,7 @@
 .card-header button i svg {
   width: 24px;
   height: 24px;
-  fill: var(--F-COLOR-3);
+  fill: var(--F-COLOR-4);
 }
 
 .card-header button:hover {
@@ -302,4 +302,5 @@
   .filter-button {
     display: none;
   }
+  /* change in typescript */
 }
