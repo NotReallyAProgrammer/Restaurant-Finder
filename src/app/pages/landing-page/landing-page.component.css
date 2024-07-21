@@ -277,6 +277,10 @@
   background-color: var(--ACCENT-COLOR);
 }
 
+.card-wrapper {
+  margin-top: 50px;
+}
+
 /*  */
 
 /* MEDIA QUERIES */

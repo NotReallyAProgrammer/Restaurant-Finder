@@ -4,11 +4,12 @@
   border: 1px solid var(--BORDER-COLOR);
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
 }
 
 .card__img {
   height: 140px;
-  width: 177px;
+  min-width: 177px;
   background-color: aliceblue;
   box-shadow: var(--BOX-SHADOW);
 }
@@ -49,5 +50,37 @@
   font-weight: 600;
   color: var(--F-COLOR-2);
 }
+
+.favorite {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px;
+  background-color: var(--F-COLOR-7);
+  border-radius: 100%;
+  box-shadow: var(--BOX-SHADOW);
+}
+
+.favorite svg {
+  height: 24px;
+  width: 24px;
+}
+
+.favorite svg:hover {
+  fill: red;
+
+  overflow: hidden;
+}
 /*  */
 /*  */
+
+@media screen and (min-width: 530px) {
+  .card {
+    flex-direction: column;
+    max-width: 300px;
+  }
+
+  .card__info {
+    margin: 20px;
+  }
+}
