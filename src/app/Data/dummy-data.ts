@@ -71,4 +71,12 @@ export const restaurantData = [
     restaurantPricePoint: '$45 and under',
     restaurantRating: 4.7,
   },
+
+  {
+    restaurantName: 'Lola Nena',
+    restaurantType: 'Filipino',
+    restaurantLocation: 'Birch Road',
+    restaurantPricePoint: '$15 and under',
+    restaurantRating: 4.5,
+  },
 ];
