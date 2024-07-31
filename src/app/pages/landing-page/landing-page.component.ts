@@ -13,6 +13,14 @@ export class LandingPageComponent {
   isFilterClose: boolean = false;
   srcWidth!: any;
 
+  ngOnInit() {
+    if ((this.srcWidth = window.screen.width >= 760)) {
+      this.isFilterClose = true;
+    } else {
+      this.isFilterClose = false;
+    }
+  }
+
   @HostListener('window:resize', ['$event'])
   getScreenSize(event: Event) {
     this.srcWidth = window.innerWidth;
@@ -20,14 +28,6 @@ export class LandingPageComponent {
     console.log(this.srcWidth);
 
     if (this.srcWidth >= 760) {
-      this.isFilterClose = true;
-    } else {
-      this.isFilterClose = false;
-    }
-  }
-
-  ngOnInit() {
-    if ((this.srcWidth = window.screen.width >= 760)) {
       this.isFilterClose = true;
     } else {
       this.isFilterClose = false;
