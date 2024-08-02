@@ -4,9 +4,12 @@
   </figure>
 
   <div class="card__info">
-    <h4>Anchor & James</h4>
-    <p>American|Downtown</p>
-    <h4>$30 and under</h4>
+    <h4>{{ restaurantInfo.restaurantName }}</h4>
+    <p>
+      {{ restaurantInfo.restaurantType }} |
+      {{ restaurantInfo.restaurantLocation }}
+    </p>
+    <h4>{{ restaurantInfo.restaurantPrice }}</h4>
     <div class="info-rating">
       <i>
         <svg

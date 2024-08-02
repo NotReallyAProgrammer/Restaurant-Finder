@@ -793,7 +793,9 @@
       </div>
 
       <div class="card-wrapper">
-        <app-cards></app-cards>
+        @for(info of restaurantInfo;track info){
+        <app-cards [restaurantInfo]="info"></app-cards>
+        }
       </div>
     </section>
   </div>

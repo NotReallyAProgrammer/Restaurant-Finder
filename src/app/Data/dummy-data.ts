@@ -1,5 +1,6 @@
 export const restaurantData = [
   {
+    restaurantImg: '',
     restaurantName: 'Anchor & James',
     restaurantType: 'American',
     restaurantLocation: 'Downtown Union Street',

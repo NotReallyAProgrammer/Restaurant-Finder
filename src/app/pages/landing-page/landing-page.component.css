@@ -279,11 +279,21 @@
 
 .card-wrapper {
   margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 /*  */
 
 /* MEDIA QUERIES */
+
+@media screen and (min-width: 600px) {
+  .card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 @media screen and (min-width: 760px) {
   .landing__filter {
@@ -305,6 +315,13 @@
   .close-button,
   .filter-button {
     display: none;
+  }
+
+  @media screen and (min-width: 1280px) {
+    .card-wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
   /* change in typescript */
 }

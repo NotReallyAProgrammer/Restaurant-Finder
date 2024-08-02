@@ -1,6 +1,7 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 import { CardsComponent } from '../../layouts/cards/cards.component';
 import e from 'express';
+import { restaurantData } from '../../Data/dummy-data';
 
 @Component({
   selector: 'app-landing-page',
@@ -12,6 +13,7 @@ import e from 'express';
 export class LandingPageComponent {
   isFilterClose: boolean = false;
   srcWidth!: any;
+  @Input() restaurantInfo = restaurantData;
 
   ngOnInit() {
     if ((this.srcWidth = window.screen.width >= 760)) {
