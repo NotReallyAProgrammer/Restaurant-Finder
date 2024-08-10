@@ -793,7 +793,7 @@
       </div>
 
       <div class="card-wrapper">
-        @for(info of restaurantInfo;track info){
+        @for(info of restaurantInfo | slice : 0 : 6; ;track info ) {
         <app-cards [restaurantInfo]="info"></app-cards>
         }
       </div>

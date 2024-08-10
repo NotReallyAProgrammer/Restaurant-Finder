@@ -1,12 +1,12 @@
 import { Component, HostListener, Input } from '@angular/core';
 import { CardsComponent } from '../../layouts/cards/cards.component';
-import e from 'express';
+import { CommonModule } from '@angular/common';
 import { restaurantData } from '../../Data/dummy-data';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [CardsComponent],
+  imports: [CardsComponent, CommonModule],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css',
 })
@@ -16,10 +16,12 @@ export class LandingPageComponent {
   @Input() restaurantInfo = restaurantData;
 
   ngOnInit() {
-    if ((this.srcWidth = window.screen.width >= 760)) {
-      this.isFilterClose = true;
-    } else {
-      this.isFilterClose = false;
+    if (typeof window !== 'undefined') {
+      if ((this.srcWidth = window.screen.width >= 760)) {
+        this.isFilterClose = true;
+      } else {
+        this.isFilterClose = false;
+      }
     }
   }
 
