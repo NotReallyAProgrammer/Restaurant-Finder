@@ -23,12 +23,12 @@
 }
 
 .card__info h4 {
-  font-size: var(--FS-BODY-2);
+  font-size: var(--FS-HEADER-CARD);
   color: var(--F-COLOR-1);
 }
 
 .card__info p {
-  font-size: var(--FS-BODY-4);
+  font-size: var(--FS-DESC-CARD);
   color: var(--F-COLOR-3);
 }
 
@@ -54,7 +54,7 @@
 .favorite {
   position: absolute;
   top: 10px;
-  left: 10px;
+  right: 10px;
   padding: 5px;
   background-color: var(--F-COLOR-7);
   border-radius: 100%;
@@ -83,5 +83,16 @@
 
   .card__info {
     margin: 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .card {
+    max-width: 450px;
+    max-height: 700px;
+  }
+
+  .card__img {
+    height: 250px;
   }
 }

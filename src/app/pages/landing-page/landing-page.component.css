@@ -245,6 +245,8 @@
   padding-inline: var(--PADDING-INLINE);
   padding-top: 50px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-header {
@@ -286,6 +288,32 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+.card-nav {
+  margin-top: 50px;
+  align-self: flex-end;
+}
+.card-nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.card-nav li {
+  list-style: none;
+}
+
+.card-nav button {
+  padding: 10px;
+  background-color: white;
+  border: 2px solid var(--BORDER-COLOR);
+  border-radius: 10px;
+}
+
+.card-nav button i svg {
+  height: 16px;
+  width: 16px;
 }
 
 /*  */

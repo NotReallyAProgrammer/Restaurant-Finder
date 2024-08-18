@@ -40,6 +40,8 @@ i {
   /* | FONTS */
   --FF: "Inter", sans-serif;
   --FS-HEADER-1: clamp(1.5rem, 1.35rem + 0.75vw, 2.25rem);
+  --FS-HEADER-CARD: clamp(1rem, 0.975rem + 0.125vw, 1.125rem);
+  --FS-DESC-CARD: clamp(0.75rem, 0.725rem + 0.125vw, 0.875rem);
 
   --FS-HEADER-2: 24px;
   --FS-BODY-1: 18px;
