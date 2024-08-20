@@ -316,6 +316,12 @@
   width: 16px;
 }
 
+.card-nav button:hover {
+  background-color: black;
+  fill: white;
+  color: white;
+}
+
 /*  */
 
 /* MEDIA QUERIES */
