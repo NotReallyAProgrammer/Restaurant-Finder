@@ -812,11 +812,18 @@
               </svg>
             </i>
           </button>
+
+          @for(page of navCount;track page){
           <li>
             <button>
-              <p>01</p>
+              <p>
+                <span *ngIf="page < 10">0</span>
+                {{ page }}
+              </p>
             </button>
           </li>
+          }
+
           <button type="button" title="next button">
             <i>
               <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">

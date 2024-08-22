@@ -316,6 +316,10 @@
   width: 16px;
 }
 
+.card-nav span {
+  margin-right: -5px;
+}
+
 .card-nav button:hover {
   background-color: black;
   fill: white;

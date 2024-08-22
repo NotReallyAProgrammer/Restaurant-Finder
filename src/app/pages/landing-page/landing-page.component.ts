@@ -14,6 +14,7 @@ export class LandingPageComponent {
   isFilterClose: boolean = false;
   srcWidth!: any;
   @Input() restaurantInfo = restaurantData;
+  navCount!: number[];
 
   ngOnInit() {
     if (typeof window !== 'undefined') {
@@ -22,6 +23,14 @@ export class LandingPageComponent {
       } else {
         this.isFilterClose = false;
       }
+    }
+
+    if (this.restaurantInfo.length < 6) {
+      this.navCount = this.range(1, 1);
+    } else {
+      const pageCount = Math.ceil(this.restaurantInfo.length / 6);
+
+      this.navCount = this.range(1, pageCount);
     }
   }
 
@@ -44,5 +53,9 @@ export class LandingPageComponent {
 
   closeNav(): void {
     this.isFilterClose = false;
+  }
+
+  range(start: number, end: number): number[] {
+    return [...Array(end).keys()].map((el) => el + start);
   }
 }
