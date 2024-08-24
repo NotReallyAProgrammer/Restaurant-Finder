@@ -815,7 +815,10 @@
 
           @for(page of navCount;track page){
           <li>
-            <button>
+            <button
+              (click)="changePage(page)"
+              [ngClass]="{ 'button-nav': true, active: currentPage === page }"
+            >
               <p>
                 <span *ngIf="page < 10">0</span>
                 {{ page }}

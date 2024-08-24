@@ -2,6 +2,7 @@ import { Component, HostListener, Input } from '@angular/core';
 import { CardsComponent } from '../../layouts/cards/cards.component';
 import { CommonModule } from '@angular/common';
 import { restaurantData } from '../../Data/dummy-data';
+import { log } from 'node:console';
 
 @Component({
   selector: 'app-landing-page',
@@ -15,6 +16,7 @@ export class LandingPageComponent {
   srcWidth!: any;
   @Input() restaurantInfo = restaurantData;
   navCount!: number[];
+  currentPage!: number;
 
   ngOnInit() {
     if (typeof window !== 'undefined') {
@@ -38,8 +40,6 @@ export class LandingPageComponent {
   getScreenSize(event: Event) {
     this.srcWidth = window.innerWidth;
 
-    console.log(this.srcWidth);
-
     if (this.srcWidth >= 760) {
       this.isFilterClose = true;
     } else {
@@ -53,6 +53,10 @@ export class LandingPageComponent {
 
   closeNav(): void {
     this.isFilterClose = false;
+  }
+
+  changePage(page: any): void {
+    this.currentPage = page;
   }
 
   range(start: number, end: number): number[] {

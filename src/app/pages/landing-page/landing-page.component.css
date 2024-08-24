@@ -247,6 +247,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-inline: auto;
 }
 
 .card-header {
@@ -288,6 +289,7 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  width: 100%;
 }
 
 .card-nav {
@@ -304,11 +306,13 @@
   list-style: none;
 }
 
-.card-nav button {
+.card-nav button,
+.button-nav {
   padding: 10px;
-  background-color: white;
+
   border: 2px solid var(--BORDER-COLOR);
   border-radius: 10px;
+  cursor: default;
 }
 
 .card-nav button i svg {
@@ -324,6 +328,12 @@
   background-color: black;
   fill: white;
   color: white;
+}
+
+.button-nav.active {
+  background-color: black;
+  color: white;
+  border-color: black;
 }
 
 /*  */
@@ -361,8 +371,12 @@
 
   @media screen and (min-width: 1280px) {
     .card-wrapper {
-      display: grid;
       grid-template-columns: repeat(3, 1fr);
+    }
+
+    app-cards {
+      width: 100%;
+      margin-left: 5%;
     }
   }
   /* change in typescript */
