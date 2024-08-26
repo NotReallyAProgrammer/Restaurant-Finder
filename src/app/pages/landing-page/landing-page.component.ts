@@ -16,9 +16,12 @@ export class LandingPageComponent {
   srcWidth!: any;
   @Input() restaurantInfo = restaurantData;
   navCount!: number[];
-  currentPage!: number;
+  currentPage: number = 1;
+  pageCount!: number;
 
   ngOnInit() {
+    this.pageCount = Math.ceil(this.restaurantInfo.length / 6);
+
     if (typeof window !== 'undefined') {
       if ((this.srcWidth = window.screen.width >= 760)) {
         this.isFilterClose = true;
@@ -30,9 +33,7 @@ export class LandingPageComponent {
     if (this.restaurantInfo.length < 6) {
       this.navCount = this.range(1, 1);
     } else {
-      const pageCount = Math.ceil(this.restaurantInfo.length / 6);
-
-      this.navCount = this.range(1, pageCount);
+      this.navCount = this.range(1, this.pageCount);
     }
   }
 
@@ -57,6 +58,26 @@ export class LandingPageComponent {
 
   changePage(page: any): void {
     this.currentPage = page;
+  }
+  prevPage(): void {
+    const toText = this.pageCount.toString();
+    const lastChar = toText.slice(-1);
+    const lastDigit = +lastChar;
+    const toNumber = Number(lastDigit);
+    // GET THE LAST PAGE
+
+    if (this.currentPage <= 1) {
+      this.currentPage = toNumber + 1;
+    }
+    this.currentPage = this.currentPage - 1;
+  }
+
+  nextPage(): void {
+    if (this.currentPage === this.pageCount) {
+      this.currentPage = 1;
+    } else {
+      this.currentPage = this.currentPage + 1;
+    }
   }
 
   range(start: number, end: number): number[] {
