@@ -793,7 +793,8 @@
       </div>
 
       <div class="card-wrapper">
-        @for(info of restaurantInfo | slice : 0 : 6; ;track info ) {
+        @for(info of restaurantInfo | paginate :{ itemsPerPage: 6, currentPage:
+        currentPage } ;track info ) {
         <app-cards [restaurantInfo]="info"></app-cards>
         }
       </div>

@@ -2,12 +2,13 @@ import { Component, HostListener, Input } from '@angular/core';
 import { CardsComponent } from '../../layouts/cards/cards.component';
 import { CommonModule } from '@angular/common';
 import { restaurantData } from '../../Data/dummy-data';
-import { log } from 'node:console';
+
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [CardsComponent, CommonModule],
+  imports: [CardsComponent, CommonModule, NgxPaginationModule],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css',
 })
