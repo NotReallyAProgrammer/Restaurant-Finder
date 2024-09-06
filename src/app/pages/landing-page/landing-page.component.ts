@@ -2,19 +2,27 @@ import { Component, HostListener, Input } from '@angular/core';
 import { CardsComponent } from '../../layouts/cards/cards.component';
 import { CommonModule } from '@angular/common';
 import { restaurantData } from '../../Data/dummy-data';
-
+import { FilterPipe } from '../../pipes/filter.pipe';
+import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [CardsComponent, CommonModule, NgxPaginationModule],
+  imports: [
+    CardsComponent,
+    CommonModule,
+    NgxPaginationModule,
+    FormsModule,
+    FilterPipe,
+  ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css',
 })
 export class LandingPageComponent {
   isFilterClose: boolean = false;
   srcWidth!: any;
+  searchText!: string;
   @Input() restaurantInfo = restaurantData;
   navCount!: number[];
   currentPage: number = 1;

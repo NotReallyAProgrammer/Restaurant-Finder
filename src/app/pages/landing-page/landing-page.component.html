@@ -35,6 +35,7 @@
           type="text"
           placeholder="Search for Restaurant by Name, Cuisine, Location"
           class="input"
+          [(ngModel)]="searchText"
         />
       </div>
     </section>
@@ -793,8 +794,8 @@
       </div>
 
       <div class="card-wrapper">
-        @for(info of restaurantInfo | paginate :{ itemsPerPage: 6, currentPage:
-        currentPage } ;track info ) {
+        @for(info of restaurantInfo | filter:searchText | paginate :{
+        itemsPerPage: 6, currentPage: currentPage } ;track info ) {
         <app-cards [restaurantInfo]="info"></app-cards>
         }
       </div>
