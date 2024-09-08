@@ -774,7 +774,9 @@
 
     <section class="landing__card">
       <div class="card-header">
-        <p class="cards-result">Found <span>375 results</span> in 54 seconds</p>
+        <p class="cards-result">
+          Found <span>{{ resultCount }} results</span> in 54 seconds
+        </p>
 
         <button title="filter" (click)="showFilter()">
           <i>

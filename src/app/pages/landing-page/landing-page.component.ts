@@ -27,6 +27,7 @@ export class LandingPageComponent {
   navCount!: number[];
   currentPage: number = 1;
   pageCount!: number;
+  resultCount!: number;
 
   ngOnInit() {
     this.pageCount = Math.ceil(this.restaurantInfo.length / 6);
@@ -44,6 +45,8 @@ export class LandingPageComponent {
     } else {
       this.navCount = this.range(1, this.pageCount);
     }
+
+    this.resultCount = this.restaurantInfo.length;
   }
 
   @HostListener('window:resize', ['$event'])
